@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Online_Account_Book">
+    <output-path>$PROJECT_DIR$/out/artifacts/Online_Account_Book</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Online_Account_Book/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Online_Account_Book" />
+        </element>
+        <element id="dir-copy" path="D:/apache-tomcat-8.5.34/webapps" />
+      </element>
+      <element id="dir-copy" path="E:/apache-tomcat-9.0.20" />
+    </root>
+  </artifact>
+</component>

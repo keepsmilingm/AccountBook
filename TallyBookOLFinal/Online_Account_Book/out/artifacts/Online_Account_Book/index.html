@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>在线记账本</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- jquery-confirm 的样式 -->
+
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript"  src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/jquery-confirm.3.3.min.css">
+    <script src="js/echarts.common.min.js"></script>
+
+    <!--<script src="js/charts_info.js"></script>-->
+    <!-- jQuery Confirm, jQuery插件, 用于弹出消息框 -->
+    <script type="text/javascript"  src="js/jquery-confirm.3.3.min.js"></script>
+    <script type="text/javascript"  src="js/jquery-confirm-bailey.js"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- Moment, 处理时间/日期的第三方库 -->
+    <script type="text/javascript" src="js/moment.2.24.0.js"></script>
+    <script type="text/javascript" src="js/moment.locale.2.24.0.js"></script>
+
+    <!-- 本页面自定义 javascript 代码 -->
+    <script type="text/javascript" src="js/index.js"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="records" class="panel panel-primary">
+            <div class="panel-heading" style="height: 40px;">
+                <h3 class="panel-title">
+                    <i class="icon glyphicon glyphicon-list"></i>记账本
+                </h3>
+                <div id="divTop" style="margin:0 auto;height:25px;background:#337ab7;float:left;display:none">
+                    <p style="display: inline-block;margin-left: 40px">排序：</p>
+                    <select name="jigou" class="select_input jg_select" id="sort_type" onchange="sort()" style="outline: none;background:#337ab7;border: none">
+                        <option value="0" id="sort0">时间降序</option>
+                        <option value="1">时间升序</option>
+                        <option value="2">金额升序</option>
+                        <option value="3">金额降序</option>
+                    </select>
+                </div>
+                <a id="btn-add-bill" title="打开/关闭记账面板"><i class="icon glyphicon glyphicon-plus-sign"></i></a>
+            </div>
+
+            <div class="panel-body" >
+                <div style="background: #f5f5f5;height:25px;line-height: 25px;position:absolute;width:332px;" >
+                    <a id="btn-switch" title="切换视图" style="margin-left: 5px;height:25px;cursor:pointer"><i class="icon glyphicon glyphicon-list"></i></a>
+                    <input type="text" id="search-editor" value="" style="height: 23px;border-radius: 10px;border:1px solid #bce8f1;margin-left:50px;outline: none">
+                    <a id="btn-search-bill" title="按关键字搜索账单" style="margin-left: 10px;height:25px;cursor:pointer"><i class="icon glyphicon glyphicon-search"></i></a>
+                </div>
+                <ul id="bill-items" style="margin-top: 25px;display: none">
+
+                </ul>
+                <div id="charts_item">
+                    <div  id="charts2"  style="height:250px;margin-top: 100px"></div>
+                </div>
+
+
+            </div>
+            <div class="panel-footer">
+
+                <img id="progress" src="img/spinner.gif" />
+                <br>
+                <h5 id="moneyin" style="display: inline-block;">收入<span></span></h5>
+                <div id="actionArea" style="float:right;display: none">
+                    <div id="onlySeeBtn" style="display: inline-block;">
+                        <label id="only-see-in" style="margin-left: 60px;color:#1caa66;font-size: 0.9em">
+                            <input type="radio" name="radio" value="1" class="radio_btn" >仅看收入</label>
+                        <label id="only-see-out" style="color:#ff625d;font-size: 0.9em">
+                            <input type="radio" name="radio" value="2" class="radio_btn" style="color:red">仅看支出</label>
+                    </div>
+                    <a id="see-all" title="查看全部" style="margin-left:10px; cursor:pointer"><i class="icon glyphicon glyphicon-eye-open"></i></a>
+                </div>
+                <br>
+                <h5 id="moneyout" style="display: inline-block;">支出<span></span></h5>
+                <h4 id="balance" style="color:green;">
+                    结余:<span></span>
+                </h4>
+            </div>
+        </div>
+
+        <div id="panel-bill-editor" class="panel panel-info" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="icon glyphicon glyphicon-pencil"></i>新增账单</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <label>金额</label>
+                    <input id="nb-amount" type="number" max="100000" class="form-control" placeholder="收入/支出金额">
+                </div>
+                <div class="input-group">
+                    <label>备注</label>
+                    <input id="nb-memo" type="text" maxlength="50" class="form-control">
+                </div>
+                <div class="input-group">
+                    <label>消费类型</label>
+                    <select id="nb-type" type="text" class="form-control">
+                        <option value=""></option>
+                        <option value="0">饮食</option>
+                        <option value="交通">交通</option>
+                        <option value="娱乐">娱乐</option>
+                        <option value="学习">学习</option>
+                        <option value="日用">日用</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <button id="btn-confirm-add" class="btn btn-sm btn-info">
+                    <i class="icon glyphicon glyphicon-floppy-save"></i>记一笔
+                </button>
+            </div>
+        </div>
+
+        <div id="panel-bill-editor3" class="panel panel-info" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="icon glyphicon glyphicon-pencil"></i>修改收入账单</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <label>金额</label>
+                    <input id="amount1" type="number" max="100000" class="form-control" placeholder="收入/支出金额">
+                </div>
+                <div class="input-group">
+                    <label>备注</label>
+                    <input id="memo1" type="text" maxlength="50" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="panel-footer">
+                <button id="btn-cancel1" class="btn btn-sm btn-info" onclick="cancel">
+                    <i class=""></i>关闭
+                </button>
+                <button id="btn-confirm-edit1" class="btn btn-sm btn-info" onclick="updateIn()">
+                    <i class="icon glyphicon glyphicon-floppy-save"></i>确认修改
+                </button>
+            </div>
+        </div>
+
+        <div id="panel-bill-editor2" class="panel panel-info" style="display:none;">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="icon glyphicon glyphicon-pencil"></i>修改支出账单</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <label>金额</label>
+                    <input id="amount" type="number" max="100000" class="form-control" placeholder="收入/支出金额">
+                </div>
+                <div class="input-group">
+                    <label>备注</label>
+                    <input id="memo" type="text" maxlength="50" class="form-control">
+                </div>
+                <div class="input-group">
+                    <label>消费类型</label>
+                    <select id="type" type="text" class="form-control">
+                        <option value=""></option>
+                        <option id="updateType1" value="饮食">饮食</option>
+                        <option id="updateType2" value="交通">交通</option>
+                        <option id="updateType3" value="娱乐">娱乐</option>
+                        <option id="updateType4" value="学习">学习</option>
+                        <option id="updateType5" value="日用">日用</option>
+                        <option id="updateType6" value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <button id="btn-cancel" class="btn btn-sm btn-info" onclick="cancel()">
+                    <i class=""></i>关闭
+                </button>
+                <button id="btn-confirm-edit" class="btn btn-sm btn-info" onclick="updateOut()">
+                    <i class="icon glyphicon glyphicon-floppy-save"></i>确认修改
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/charts_info.js"></script>
+    <script src="js/charts_info2.js"></script>
+</body>
+</html>

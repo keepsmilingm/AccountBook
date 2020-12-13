@@ -1,0 +1,149 @@
+16-Jun-2019 00:27:25.009 警告 [main] org.apache.catalina.core.AprLifecycleListener.init 基于APR的本地库加载失败.错误报告为[D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+	java.lang.UnsatisfiedLinkError: D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+		at java.base/java.lang.ClassLoader$NativeLibrary.load0(Native Method)
+		at java.base/java.lang.ClassLoader$NativeLibrary.load(ClassLoader.java:2430)
+		at java.base/java.lang.ClassLoader$NativeLibrary.loadLibrary(ClassLoader.java:2487)
+		at java.base/java.lang.ClassLoader.loadLibrary0(ClassLoader.java:2684)
+		at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2617)
+		at java.base/java.lang.Runtime.load0(Runtime.java:767)
+		at java.base/java.lang.System.load(System.java:1831)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:206)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:198)
+		at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+		at org.apache.catalina.connector.Connector.<init>(Connector.java:80)
+		at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:64)
+		at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1173)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:510)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1377)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2708)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+		at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+		at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216)
+		at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635)
+		at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1431)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:566)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:304)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本:        Apache Tomcat/9.0.20
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.构建:          May 3 2019 22:26:00 UTC
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.20.0
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:            10.0
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 结.造:          amd64
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:             C:\Program Files\OpenJDK\jdk-11.0.2
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 版本:           11.0.2+9
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:            Oracle Corporation
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\conf\logging.properties
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20
+16-Jun-2019 00:27:25.094 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\temp
+16-Jun-2019 00:27:25.326 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+16-Jun-2019 00:27:25.479 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[HTTP/1.1-8080]]失败。
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:983)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1059)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:304)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:461)
+		at java.base/sun.nio.ch.Net.bind(Net.java:453)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:248)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1119)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1132)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:557)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:74)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+		... 13 more
+16-Jun-2019 00:27:25.479 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["ajp-nio-8009"]
+16-Jun-2019 00:27:25.479 严重 [main] org.apache.catalina.util.LifecycleBase.handleSubClassException 初始化组件[Connector[AJP/1.3-8009]]失败。
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:983)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:533)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1059)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:584)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:607)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:304)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: java.net.BindException: Address already in use: bind
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:461)
+		at java.base/sun.nio.ch.Net.bind(Net.java:453)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+		at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:248)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1119)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1132)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:557)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:980)
+		... 13 more
+16-Jun-2019 00:27:25.479 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[618]毫秒内初始化
+16-Jun-2019 00:27:25.542 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+16-Jun-2019 00:27:25.542 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.20]
+16-Jun-2019 00:27:25.542 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\webapps\ROOT]
+16-Jun-2019 00:27:25.912 警告 [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [132] milliseconds.
+16-Jun-2019 00:27:25.927 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\信息学院工作相关文件（常用）\教学\Android应用软件开发\实验\实验4-Android综合程序设计\apache-tomcat-9.0.20\webapps\ROOT] has finished in [385] ms
+16-Jun-2019 00:27:25.943 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in [453] milliseconds
+16-Jun-2019 00:27:25.959 严重 [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use: NET_Bind
+		at java.base/java.net.PlainSocketImpl.bind0(Native Method)
+		at java.base/java.net.PlainSocketImpl.socketBind(PlainSocketImpl.java:132)
+		at java.base/java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:436)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:381)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:243)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:584)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:721)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:667)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:344)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:475)
+16-Jun-2019 00:27:25.959 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+16-Jun-2019 00:27:25.959 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+16-Jun-2019 00:27:25.959 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+16-Jun-2019 00:27:25.974 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+16-Jun-2019 00:27:25.981 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+16-Jun-2019 00:27:25.981 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+16-Jun-2019 00:27:25.981 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["ajp-nio-8009"]
